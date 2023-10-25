@@ -33,24 +33,27 @@ def run():
     
     data_out = []
     length = message.Create_Message(2, length, arr_out, data_out)
-    Print_Array(data_out)
+    print("Create frame metadata:")
+    Print_Array(data_out, length)
     Send_Msg_To_Lora(data_out)
-    time.sleep(1)
+    time.sleep(3)
 
     while update_count_size_loop < file_size:
         arr_data = []
         frame_data_out = []
         
-        print(index) 
+        print("offset: ",index) 
         File_Size.Get_Arr_Data_File(output_file, size, index, arr_data)
+        print("Create arr data in file:")
         print(arr_data)
         length_data = message_handle.UpdateFile_CreateFrameData(constant.OTA_State_E.OTA_STATE_DATA.value, size, index, arr_data, frame_data_out)
         
         length_msg = message.Create_Message(2, length_data, frame_data_out, data_out)
         
-        Print_Array(data_out)
+        print("Create message FrameData:")        
+        Print_Array(data_out, length_msg)
         Send_Msg_To_Lora(data_out)
-        time.sleep(1)
+        time.sleep(3)
 
         update_count_size_loop += size
         index += size
@@ -60,8 +63,8 @@ def run():
     # print(Get_Check_Sum_File(output_file))
 
 # In mảng 
-def Print_Array(arr):
-    for i in range(len(arr)):
+def Print_Array(arr, length):
+    for i in range(length):
         print(hex(arr[i]),end=' ')
     print('')
 

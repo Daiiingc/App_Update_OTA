@@ -23,7 +23,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="OTA_Update">
        <attribute name="title">
@@ -83,19 +83,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="font">
-             <font>
-              <family>Arial Rounded MT Bold</family>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Password</string>
-            </property>
-           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_5">
@@ -230,19 +217,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QComboBox" name="Box_Password_Tab_1">
-            <property name="minimumSize">
-             <size>
-              <width>240</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="editable">
-             <bool>true</bool>
-            </property>
-           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_13">
@@ -1039,19 +1013,6 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="label_9">
-            <property name="font">
-             <font>
-              <family>Arial Rounded MT Bold</family>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Password</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <spacer name="horizontalSpacer_43">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1147,7 +1108,7 @@
            <widget class="QComboBox" name="Box_File_Tab_3">
             <property name="minimumSize">
              <size>
-              <width>240</width>
+              <width>220</width>
               <height>30</height>
              </size>
             </property>
@@ -1168,19 +1129,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QComboBox" name="Box_Password_Tab_3">
-            <property name="minimumSize">
-             <size>
-              <width>240</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="editable">
-             <bool>true</bool>
-            </property>
-           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_49">

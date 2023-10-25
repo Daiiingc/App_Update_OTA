@@ -9,7 +9,7 @@ def UpdateFile_CreateFrameMetaData(cmd, size, crc, arr_name, data_out):
     meta_data_temp.cmd = cmd
     meta_data_temp.package_size = size
     meta_data_temp.package_crc = crc
-    memcopy(meta_data_temp.name, arr_name, len(arr_name))
+    meta_data_temp.name = list(arr_name)
 
     # truyền struct của MetaData vào trong mảng
     # truyền cmd
@@ -42,9 +42,8 @@ def UpdateFile_CreateFrameData(cmd, length, offset, arr_data, data_out):
     data_temp.cmd = cmd
     data_temp.length = length
     data_temp.offset = offset
-    memcopy(data_temp.data, arr_data, len(arr_data))
+    data_temp.data = list(arr_data)
 
-    del data_out[:]
     # truyền struct của FrameData vào trong mảng
     # truyền cmd
     data_out.append(data_temp.cmd)
@@ -64,11 +63,6 @@ def UpdateFile_CreateFrameData(cmd, length, offset, arr_data, data_out):
         data_out.append(data_temp.data[i])
 
     return len(data_out)
-
-def memcopy(arr_copy, arr_in, length):
-    del arr_copy[:]
-    for i in range(0, length):
-        arr_copy.append(arr_in[i])
 
 # data = [1,2,34,234,534,2,4,756]
 # arr_out = []

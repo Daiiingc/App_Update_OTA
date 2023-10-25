@@ -19,7 +19,7 @@ class Message_Frame_Msg_T:
     Start_Frame: int = 0                               # chứa 1 byte trong mảng
     Type_Message: int = 0                              # chứa 1 byte trong mảng
     Length_Data: int = 0                               # LengthData = Length(Data[] + CheckFrame) chứa 2 bytes
-    Data: int = []                                # Data[] mỗi phần tử trong chiếm 1 byte
+    Data: int = list()                                   # Data[] mỗi phần tử trong chiếm 1 byte
     Check_Frame: int = 0                               # chứa 2 byte trong mảng 
 
 
@@ -27,10 +27,10 @@ class Frame_Meta_Data_T:
     cmd: int  = OTA_State_E.OTA_STATE_NULL.value       # chứa 1 byte trong mảng
     package_size: int = 0                              # chứa 4 bytes trong mảng
     package_crc: int  = 0                              # chứa 4 bytes trong mảng
-    name: int = []                                # mỗi phần tử chứa 1 bytes
+    name: int = []                                     # mỗi phần tử chứa 1 bytes
 
 class Frame_Data_T:
     cmd: int     = OTA_State_E.OTA_STATE_NULL.value    # chứa 1 byte trong mảng
     length: int  = 0                                   # chứa 1 byte trong mảng
     offset: int  = 0                                   # chứa 4 bytes trong mảng
-    data: int = []                                # mỗi phần tử chứa 1 bytes
+    data: int = []                                     # mỗi phần tử chứa 1 bytes
